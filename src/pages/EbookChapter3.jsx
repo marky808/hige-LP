@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../assets/css/ebook.module.css";
 
 const Chapter3 = () => {
     const navigate = useNavigate();
@@ -11,8 +12,8 @@ const Chapter3 = () => {
         navigate("/ebook/chapter2");
     };
     return (
-        <div className="w-200 mx-auto p-4">
-            <div className="bg-white shadow-md rounded-lg p-6 md:p-8 mb-8 text-left">
+        <div className="bg-gray-100 h-full p-5 flex justify-center items-center px-4">
+            <div className="bg-white max-w-3xl w-full shadow-md rounded-lg p-6 md:p-8 mb-8 text-left">
                 <h3 className="text-2xl md:text-3xl lg:text-4xl text-blue-800 border-b-3 border-blue-500 pb-4 mb-8 font-bold">
                     第3章 よくある失敗例と伝えたいこと
                 </h3>
