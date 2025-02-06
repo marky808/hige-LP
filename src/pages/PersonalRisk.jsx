@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Battery, Heart, ShieldHalf } from "lucide-react";
 import React, { useEffect } from "react";
+import { FaHeart, FaShieldAlt } from "react-icons/fa";
+import { FaBolt } from "react-icons/fa6";
 import { Outlet, useNavigate } from "react-router-dom";
 
 const PersonalRisk = () => {
@@ -14,16 +15,37 @@ const PersonalRisk = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-11/12 max-w-xl bg-white rounded-lg shadow-lg overflow-hidden animate-fadeInUp">
         {/* Header */}
-        <header className="bg-gradient-to-r from-[#00c300] to-[#009900] text-white text-center py-10">
-          <h1 className="text-3xl font-bold">パーソナルリスク診断</h1>
+        <header className="bg-gradient-to-r from-[#00c300] to-[#009900] text-white text-center !py-[70px] !px-8">
+          <h1 className="text-lg font-semibold">パーソナルリスク診断</h1>
           <p className="text-lg">あなたの未来を守るための第一歩</p>
         </header>
         {/* Main Content */}
-        <main className="p-8 text-center">
+        <main className="px-5 py-10 text-center">
           <div className="flex justify-around flex-wrap space-y-4 md:space-y-0">
-            <Feature icon={<Battery />} text="即時診断" />
-            <Feature icon={<ShieldHalf />} text="リスク評価" />
-            <Feature icon={<Heart />} text="無料で安心" />
+            <Feature
+              icon={
+                <div className="text-[#00C300] text-4xl">
+                  <FaBolt />
+                </div>
+              }
+              text="即時診断"
+            />
+            <Feature
+              icon={
+                <div className="text-[#00C300] text-4xl">
+                  <FaShieldAlt />
+                </div>
+              }
+              text="リスク評価"
+            />
+            <Feature
+              icon={
+                <div className="text-[#00C300] text-4xl">
+                  <FaHeart />
+                </div>
+              }
+              text="無料で安心"
+            />
           </div>
 
           <p className="text-gray-700 my-6">
@@ -33,7 +55,7 @@ const PersonalRisk = () => {
           {/* CTA Button */}
           <button
             onClick={() => navigate("/quiz")}
-            className="!bg-green-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-green-700 transition-all"
+            className="!bg-[#00c300] text-white font-semibold !py-4 !px-8 !rounded-full shadow-lg hover:bg-[#009900] transition-all"
           >
             診断を始める
           </button>
@@ -53,10 +75,9 @@ export default PersonalRisk;
 function Feature({ icon, text }) {
   return (
     <div className="flex flex-col items-center space-y-2">
-      {/* <FontAwesomeIcon icon="fa-solid fa-dog" /> */}
       {icon}
       {/* <i className={`fas fa-${icon} text-green-500 text-4xl`}></i> */}
-      <span className="text-green-700 font-medium">{text}</span>
+      <span className="text-[#00C300] font-medium">{text}</span>
     </div>
   );
 }
