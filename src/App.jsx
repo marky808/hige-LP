@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Ebook from "./components/Ebook";
+import Ebook from "./pages/Ebook";
 import PersonalRisk from "./pages/PersonalRisk";
 
 function App() {
