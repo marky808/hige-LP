@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const EBook = () => {
+    const navigate = useNavigate();
+    const handleNavigation = (chapter) => {
+        navigate(`/ebook/${chapter}`);
+    };
     return (
         <div className="w-200 px-4">
             <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
@@ -19,25 +24,29 @@ const EBook = () => {
                         目次
                     </h3>
                     <ul className="space-y-4 text-left pl-6">
-                        <li className="text-lg text-blue-800 hover:text-blue-600 transition-colors">
-                            <a href="/ebook/chapter0">
-                                第0章 お金があればしあわせ？
-                            </a>
+                        <li
+                            className="text-lg text-blue-800 hover:text-blue-600 transition-colors cursor-pointer"
+                            onClick={() => handleNavigation('chapter0')}
+                        >
+                            第0章 お金があればしあわせ？
                         </li>
-                        <li className="text-lg text-blue-800 hover:text-blue-600 transition-colors">
-                            <a href="/ebook/chapter1">
-                                第1章 資産形成に正解はあるか？
-                            </a>
+                        <li
+                            className="text-lg text-blue-800 hover:text-blue-600 transition-colors cursor-pointer"
+                            onClick={() => handleNavigation('chapter1')}
+                        >
+                            第1章 資産形成に正解はあるか？
                         </li>
-                        <li className="text-lg text-blue-800 hover:text-blue-600 transition-colors">
-                            <a href="/ebook/chapter2">
-                                第2章 会社経営と家族経営
-                            </a>
+                        <li
+                            className="text-lg text-blue-800 hover:text-blue-600 transition-colors cursor-pointer"
+                            onClick={() => handleNavigation('chapter2')}
+                        >
+                            第2章 会社経営と家族経営
                         </li>
-                        <li className="text-lg text-blue-800 hover:text-blue-600 transition-colors">
-                            <a href="/ebook/chapter3">
-                                第3章 よくある失敗例と伝えたいこと
-                            </a>
+                        <li
+                            className="text-lg text-blue-800 hover:text-blue-600 transition-colors cursor-pointer"
+                            onClick={() => handleNavigation('chapter3')}
+                        >
+                            第3章 よくある失敗例と伝えたいこと
                         </li>
                     </ul>
                 </div>
