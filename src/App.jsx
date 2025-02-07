@@ -9,6 +9,7 @@ import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
 import EBook from "./pages/EBook";
 import HigeLp from "./pages/HigeLp";
+import PersonalType from "./pages/PersonalType";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/quiz" element={<Quiz />} />
       <Route path="/result" element={<Result />} />
       <Route path="/hige-lp" element={<HigeLp />} />
+      <Route path="/personal-type" element={<PersonalType />} />
     </Routes>
   );
 }
