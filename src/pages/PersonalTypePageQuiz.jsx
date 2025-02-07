@@ -31,15 +31,36 @@ const questions = [
     points: { yes: 7, no: 0 },
   },
   { text: "11. あなたは金融について詳しいですか？", points: { yes: 7, no: 0 } },
-  { text: "5. 自宅はあなた名義の持ち家ですか？", points: { yes: 7, no: 0 } },
-  { text: "5. 自宅はあなた名義の持ち家ですか？", points: { yes: 7, no: 0 } },
-  { text: "5. 自宅はあなた名義の持ち家ですか？", points: { yes: 7, no: 0 } },
-  { text: "5. 自宅はあなた名義の持ち家ですか？", points: { yes: 7, no: 0 } },
-  { text: "5. 自宅はあなた名義の持ち家ですか？", points: { yes: 7, no: 0 } },
-  { text: "5. 自宅はあなた名義の持ち家ですか？", points: { yes: 7, no: 0 } },
-  { text: "5. 自宅はあなた名義の持ち家ですか？", points: { yes: 7, no: 0 } },
-  { text: "5. 自宅はあなた名義の持ち家ですか？", points: { yes: 7, no: 0 } },
-  { text: "5. 自宅はあなた名義の持ち家ですか？", points: { yes: 7, no: 0 } },
+  {
+    text: "12. 投資や保険に関する知識を自ら身につけたいと思いますか？",
+    points: { yes: 7, no: 0 },
+  },
+  {
+    text: "13. 資産運用中の大きな下落にも冷静に対応できますか？",
+    points: { yes: 7, no: 0 },
+  },
+  {
+    text: "14. ライフステージの変化に合わせ、資産を見直すことができますか？",
+    points: { yes: 7, no: 0 },
+  },
+  { text: "15. 全て自分で解決したいと思いますか？", points: { yes: 7, no: 0 } },
+  {
+    text: "16. リスクはあっても早く大きく資産が増える投資に魅力を感じますか？",
+    points: { yes: 7, no: 0 },
+  },
+  {
+    text: "17. 100倍になる可能性がある投資は魅力的ですか？",
+    points: { yes: 7, no: 0 },
+  },
+  {
+    text: "18. 投資で損失が出ても自己責任で受け入れられますか？",
+    points: { yes: 7, no: 0 },
+  },
+  {
+    text: "19. 投資に失敗しても取り返すチャンスがあると思いますか？",
+    points: { yes: 7, no: 0 },
+  },
+  { text: "20. 自分の資産を客観的に扱えますか？", points: { yes: 7, no: 0 } },
 ];
 
 const PersonalTypePageQuiz = () => {
@@ -52,8 +73,8 @@ const PersonalTypePageQuiz = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      localStorage.setItem("riskTotalScore", totalScore);
-      navigate("/result"); // Redirect to result page
+      localStorage.setItem("typeTotalScore", totalScore);
+      navigate("/personal-type/result"); // Redirect to result page
     }
   };
 
@@ -70,6 +91,10 @@ const PersonalTypePageQuiz = () => {
       {questions[currentQuestionIndex].text ==
         "11. あなたは金融について詳しいですか？" && (
         <p className="text-[#00C300] font-bold my-7">自分</p>
+      )}
+      {questions[currentQuestionIndex].text ==
+        "16. リスクはあっても早く大きく資産が増える投資に魅力を感じますか？" && (
+        <p className="text-[#00C300] font-bold my-7">リスク</p>
       )}
       <div className="w-full max-w-2xl bg-white p-6 rounded-lg shadow-lg animate-fadeInUp">
         <h2 className="text-2xl font-bold text-[#00C300] mb-4">
