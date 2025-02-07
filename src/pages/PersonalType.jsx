@@ -11,17 +11,17 @@ const PersonalType = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-11/12 max-w-xl bg-white rounded-lg shadow-lg overflow-hidden animate-fadeInUp">
+    <div className="flex items-center justify-center min-h-screen bg-[#D0F2DD]">
+      <div className="w-11/12 max-w-xl bg-white rounded-2xl shadow-lg overflow-hidden animate-fadeInUp">
         {/* Header */}
-        <header className="bg-gradient-to-r from-[#00c300] to-[#009900] text-white text-center !py-[70px] !px-8">
-          <h1 className="text-lg font-semibold">パーソナルタイプ診断</h1>
+        <header className="bg-gradient-to-r from-[#00c300] to-[#009900] text-white text-center !py-[40px] !px-6">
+          <p className="text-4xl font-bold mb-6">パーソナルタイプ診断</p>
           <p className="text-lg">
             あなたの個性を見抜き、未来への道しるべを発見しよう
           </p>
         </header>
         {/* Main Content */}
-        <main className="px-5 py-10 text-center">
+        <main className="px-4 py-8 text-center">
           <div className="flex justify-around flex-wrap space-y-4 md:space-y-0">
             <Feature
               icon={

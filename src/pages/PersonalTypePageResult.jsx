@@ -51,10 +51,14 @@ const PersonalTypePageResult = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex justify-center hover:!border-none bg-[#EEF2F6] p-5">
-      <div className="mt-10">
+    <div className="min-h-screen flex justify-center items-center hover:!border-none bg-[#EEF2F6] p-5">
+      <div className="">
         {loading ? (
-          <button type="button" className="!text-2xl text-[#00c300]" disabled>
+          <button
+            type="button"
+            className="!text-2xl text-[#00c300] flex flex-col justify-center items-center !bg-[#EEF2F6]"
+            disabled
+          >
             <svg
               className="size-10 animate-spin "
               xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +82,7 @@ const PersonalTypePageResult = () => {
             診断中...
           </button>
         ) : (
-          <div className="bg-white p-8 rounded-lg shadow-lg md:w-[600px] md:min-h-[300px] text-center">
+          <div className="bg-white p-8 rounded-lg shadow-lg md:w-[600px] md:min-h-[300px] text-center -mt-36">
             <h1 className="!text-3xl font-semibold text-[#00c300] mb-8">
               {result.title}
             </h1>
