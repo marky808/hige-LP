@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { FaLine } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Result = () => {
@@ -36,7 +37,7 @@ const Result = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-5">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md text-center">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-[600px] min-h-[300px] text-center">
         {loading ? (
           <button type="button" className="!bg-indigo-500 ..." disabled>
             <svg
@@ -49,7 +50,7 @@ const Result = () => {
                 className="opacity-25"
                 cx="12"
                 cy="12"
-                r="10"
+                r="100"
                 stroke="currentColor"
                 strokeWidth="4"
               ></circle>
@@ -66,25 +67,22 @@ const Result = () => {
           //     診断結果を計算中...
           //   </div>
           <>
-            <h1 className="text-2xl font-bold text-green-600 mb-4">
+            <h1 className="!text-4xl font-semibold text-[#00c300] mb-8">
               {result.title}
             </h1>
-            <div className="text-lg font-semibold text-green-700 mb-2">
+            <div className="text-lg font-semibold text-[#007700] mb-8">
               あなたの得点: {totalScore} 点
             </div>
             <p className="text-gray-600 mb-4">{result.description}</p>
             <button
               onClick={() => navigate("/personal-risk")}
-              className="inline-flex items-center !bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:-translate-y-1"
+              className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl"
             >
-              <i className="fab fa-line mr-2 text-xl"></i>LINEに戻る
+              <div className="mr-2 text-2xl font-bold">
+                <FaLine />
+              </div>
+              LINEに戻る
             </button>
-            {/* <a
-              href="index.html"
-              className="inline-flex items-center bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:-translate-y-1"
-            >
-              <i className="fab fa-line mr-2 text-xl"></i>LINEに戻る
-            </a> */}
           </>
         )}
       </div>
