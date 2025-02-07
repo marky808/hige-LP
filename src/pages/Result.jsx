@@ -36,12 +36,12 @@ const Result = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-5">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-[600px] min-h-[300px] text-center">
+    <div className="min-h-screen flex items-center justify-center hover:!border-none bg-[#EEF2F6] p-5">
+      <div>
         {loading ? (
-          <button type="button" className="!bg-indigo-500 ..." disabled>
+          <button type="button" className="!text-2xl text-[#00c300]" disabled>
             <svg
-              className="mr-3 -ml-1 size-5 animate-spin text-white"
+              className="size-10 animate-spin "
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -50,7 +50,7 @@ const Result = () => {
                 className="opacity-25"
                 cx="12"
                 cy="12"
-                r="100"
+                r="10"
                 stroke="currentColor"
                 strokeWidth="4"
               ></circle>
@@ -60,13 +60,10 @@ const Result = () => {
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
               ></path>
             </svg>
-            Processing…
+            診断中...
           </button>
         ) : (
-          //   <div className="text-xl font-bold text-green-600 animate-pulse">
-          //     診断結果を計算中...
-          //   </div>
-          <>
+          <div className="bg-white p-8 rounded-lg shadow-lg md:w-[600px] md:min-h-[300px] text-center">
             <h1 className="!text-4xl font-semibold text-[#00c300] mb-8">
               {result.title}
             </h1>
@@ -76,14 +73,14 @@ const Result = () => {
             <p className="text-gray-600 mb-4">{result.description}</p>
             <button
               onClick={() => navigate("/personal-risk")}
-              className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl"
+              className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl focus:!outline-none"
             >
               <div className="mr-2 text-2xl font-bold">
                 <FaLine />
               </div>
               LINEに戻る
             </button>
-          </>
+          </div>
         )}
       </div>
     </div>

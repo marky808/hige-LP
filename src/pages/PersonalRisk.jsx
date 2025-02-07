@@ -55,7 +55,7 @@ const PersonalRisk = () => {
           {/* CTA Button */}
           <button
             onClick={() => navigate("/quiz")}
-            className="!bg-[#00c300] text-white font-semibold !py-4 !px-8 !rounded-full shadow-lg hover:bg-[#009900] transition-all"
+            className="!bg-[#00c300] text-white font-semibold !py-4 !px-8 !rounded-full shadow-lg hover:bg-[#009900] transition-all focus:!outline-none"
           >
             診断を始める
           </button>
