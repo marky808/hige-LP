@@ -4,17 +4,24 @@ import "../assets/css/ebook.module.css";
 
 const Chapter0 = () => {
     const navigate = useNavigate();
-
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
     const goBackToEbook = () => {
+        scrollToTop();
         navigate("/ebook");
     };
     const goToChapter1 = () => {
+        scrollToTop();
         navigate("/ebook/chapter1");
     };
     return (
-        <div className="bg-gray-100 h-full p-5 flex justify-center items-center px-4">
-            <div className="max-w-3xl w-full mx-auto bg-white rounded-lg shadow-lg p-8">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl text-blue-800 border-b-3 border-blue-500 pb-4 mb-8 font-bold">
+        <div className="bg-[#f7fafc] h-full p-5 flex justify-center items-center px-4">
+            <div className="max-w-3xl w-[800px] mx-auto bg-white rounded-lg shadow-lg p-8">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#2c5282] border-b-3 border-[#4299e1] pb-4 mb-8 font-bold">
                     第0章 お金があればしあわせ？
                 </h3>
                 <div className="space-y-4">

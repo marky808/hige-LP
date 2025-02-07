@@ -4,20 +4,28 @@ import "../assets/css/ebook.module.css";
 
 const Chapter2 = () => {
     const navigate = useNavigate();
-
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
     const goBackToEbook = () => {
+        scrollToTop();
         navigate("/ebook");
     };
     const goToChapter1 = () => {
+        scrollToTop();
         navigate("/ebook/chapter1");
     };
     const goToChapter3 = () => {
+        scrollToTop();
         navigate("/ebook/chapter3");
     };
     return (
-        <div className="bg-gray-100 h-full p-5 flex justify-center items-center px-4">
-            <div className="bg-white max-w-3xl w-full shadow-md rounded-lg p-6 md:p-8 mb-8 text-left">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl text-blue-800 border-b-3 border-blue-500 pb-4 mb-8 font-bold">
+        <div className="bg-[#f7fafc] h-full p-5 flex justify-center items-center px-4">
+            <div className="bg-white max-w-3xl w-[800px] shadow-md rounded-lg p-6 md:p-8 mb-8 text-left">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#2c5282] border-b-3 border-[#4299e1] pb-4 mb-8 font-bold">
                     第2章 会社経営と家族経営
                 </h3>
                 <div className="space-y-4">
@@ -186,22 +194,22 @@ const Chapter2 = () => {
                         ね？家族を経営するライフプランニングちゃんとやりましょ？
                     </p>
                 </div>
-                <div className="flex justify-between mt-12 pt-4 border-t border-gray-200">
+                <div className="flex justify-between mt-12 pt-4 border-t space-x-3 border-gray-200">
                     <a
                         onClick={goToChapter1}
-                        className="text-blue-800 border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
+                        className="text-blue-800 border border-blue-800 rounded px-2 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
                     >
                         前の章へ
                     </a>
                     <a
                         onClick={goBackToEbook}
-                        className="text-blue-800 border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
+                        className="text-blue-800 border border-blue-800 rounded px-2 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
                     >
                         目次へ戻る
                     </a>
                     <a
                         onClick={goToChapter3}
-                        className="text-blue-800 border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
+                        className="text-blue-800 border border-blue-800 rounded px-2 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
                     >
                         次の章へ
                     </a>

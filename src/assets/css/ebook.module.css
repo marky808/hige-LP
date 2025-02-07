@@ -7,6 +7,11 @@
   text-align: center;
 }
 
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

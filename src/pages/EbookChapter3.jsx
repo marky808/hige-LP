@@ -4,17 +4,24 @@ import "../assets/css/ebook.module.css";
 
 const Chapter3 = () => {
     const navigate = useNavigate();
-
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
     const goBackToEbook = () => {
+        scrollToTop();
         navigate("/ebook");
     };
     const goToChapter2 = () => {
+        scrollToTop();
         navigate("/ebook/chapter2");
     };
     return (
-        <div className="bg-gray-100 h-full p-5 flex justify-center items-center px-4">
-            <div className="bg-white max-w-3xl w-full shadow-md rounded-lg p-6 md:p-8 mb-8 text-left">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl text-blue-800 border-b-3 border-blue-500 pb-4 mb-8 font-bold">
+        <div className="bg-[#f7fafc] h-full p-5 flex justify-center items-center px-4">
+            <div className="bg-white max-w-3xl w-[800px] shadow-md rounded-lg p-6 md:p-8 mb-8 text-left">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#2c5282] border-b-3 border-[#4299e1] pb-4 mb-8 font-bold">
                     第3章 よくある失敗例と伝えたいこと
                 </h3>
                 <div className="space-y-4">
@@ -77,7 +84,8 @@ const Chapter3 = () => {
                         それぞれ解説します。
                     </p>
                 </div>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl text-blue-800 border-b-3 border-blue-500 pb-4 mb-8 font-bold">
+                <br />
+                <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#2c5282] border-b-3 border-blue-500 pb-4 mb-8 font-bold">
                     1.金融業界は宗教的な要素がある
                 </h3>
                 <div className="space-y-4">
@@ -110,7 +118,8 @@ const Chapter3 = () => {
                         →世の中に完璧な商品はないのだからメリットで他の商品のデメリットを補うように加入しましょうと言う意見。独立系FPと言われる人に多い意見。色々な商品を取り扱っている。一見よさそうに見えますが一つ一つの商品への理解が薄かったり企業規模が小さいことが多いのでそこは注意が必要。
                     </p>
                 </div>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl text-blue-800 border-b-3 border-blue-500 pb-4 mb-8 font-bold">
+                <br />
+                <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#2c5282] border-b-3 border-blue-500 pb-4 mb-8 font-bold">
                     2.自分でやるか任せるか
                 </h3>
                 <div className="space-y-4">
@@ -133,7 +142,8 @@ const Chapter3 = () => {
                         要は自分の将来の目標や夢に向かって今のお金を余らせてお金をかける行為なのでそれをさまざまな角度からアドバイスされたらバランスを崩して成功するものも失敗します。
                     </p>
                 </div>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl text-blue-800 border-b-3 border-blue-500 pb-4 mb-8 font-bold">
+                <br />
+                <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#2c5282] border-b-3 border-blue-500 pb-4 mb-8 font-bold">
                     資産形成に成功する(可能性が高い)人の特徴はズバリこの２つ！
                 </h3>
                 <div className="space-y-4">
@@ -168,7 +178,7 @@ const Chapter3 = () => {
                     </p>
 
                     <div className="profile bg-blue-100 p-6 rounded-lg mt-8">
-                        <h3 className="text-2xl md:text-2xl lg:text-3xl text-blue-800 border-b-3 border-blue-500 pb-4 mb-4 font-bold">
+                        <h3 className="text-2xl md:text-2xl lg:text-3xl text-[#2c5282] border-b-3 border-[#4299e1] pb-4 mb-4 font-bold">
                             著者プロフィール
                         </h3>
                         <h3 className="text-lg font-semibold">ヒゲさん</h3>
@@ -196,13 +206,13 @@ const Chapter3 = () => {
                 <div className="flex justify-between mt-12 pt-4 border-t border-gray-200">
                     <a
                         onClick={goToChapter2}
-                        className="text-blue-800 border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
+                        className="text-[#2c5282] border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
                     >
                         前の章へ
                     </a>
                     <a
                         onClick={goBackToEbook}
-                        className="text-blue-800 border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
+                        className="text-[#2c5282] border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
                     >
                         目次へ戻る
                     </a>

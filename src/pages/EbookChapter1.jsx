@@ -4,21 +4,29 @@ import "../assets/css/ebook.module.css";
 
 const Chapter1 = () => {
     const navigate = useNavigate();
-
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
     const goBackToEbook = () => {
+        scrollToTop();
         navigate("/ebook");
     };
     const goToChapter0 = () => {
+        scrollToTop();
         navigate("/ebook/chapter0");
     };
     const goToChapter2 = () => {
+        scrollToTop();
         navigate("/ebook/chapter2");
     };
     return (
-        <div className="bg-gray-100 h-full p-5 flex justify-center items-center px-4">
-            <div className="bg-white max-w-3xl w-full shadow-md rounded-lg p-6 md:p-8 mb-8 text-left">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl text-blue-800 border-b-3 border-blue-500 pb-4 mb-8 font-bold">
-                    第0章 お金があればしあわせ？
+        <div className="bg-[#f7fafc] h-full p-5 flex justify-center items-center px-4">
+            <div className="bg-white max-w-3xl w-[800px] shadow-md rounded-lg p-6 md:p-8 mb-8 text-left">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#2c5282] border-b-3 border-[#4299e1] pb-4 mb-8 font-bold">
+                    第1章 資産形成に正解はあるか？
                 </h3>
                 <div className="space-y-4">
                     <p className="text-base leading-relaxed">
@@ -194,22 +202,22 @@ const Chapter1 = () => {
                         もし、あなたがまずは将来の目標を明確にするライフプランニングをして貧乏になることは避けたい、将来の夢を叶えたいと思うのであれば是非無料の個別相談を受けていただければと思います^_^
                     </p>
                 </div>
-                <div className="flex justify-between mt-12 pt-4 border-t border-gray-200">
+                <div className="flex justify-between mt-12 pt-4 space-x-3 border-t border-gray-200">
                     <a
                         onClick={goToChapter0}
-                        className="text-blue-800 border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
+                        className="text-blue-800 border border-blue-800 rounded px-2 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
                     >
                         前の章へ
                     </a>
                     <a
                         onClick={goBackToEbook}
-                        className="text-blue-800 border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
+                        className="text-blue-800 border border-blue-800 rounded px-2 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
                     >
                         目次へ戻る
                     </a>
                     <a
                         onClick={goToChapter2}
-                        className="text-blue-800 border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
+                        className="text-blue-800 border border-blue-800 rounded px-2 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
                     >
                         次の章へ
                     </a>
