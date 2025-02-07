@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "motion/react";
 
 const questions = [
   {
@@ -68,6 +69,25 @@ const PersonalTypePageQuiz = () => {
   const [totalScore, setTotalScore] = useState(0);
   const navigate = useNavigate();
 
+  const fadeInUpStrong = {
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const fadeOutShrink = {
+    hidden: { opacity: 1, scale: 1 },
+    exit: {
+      opacity: 0,
+      scale: 0.8,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   const handleAnswer = (points) => {
     setTotalScore(totalScore + points);
     if (currentQuestionIndex < questions.length - 1) {
@@ -79,46 +99,85 @@ const PersonalTypePageQuiz = () => {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-[#e0f7e9] to-[rgb(200,240,216)] p-6">
-      {questions[currentQuestionIndex].text ==
-        "1. 現在ご結婚されてますか？" && (
-        <p className="text-[#00C300] font-bold my-7">家族</p>
-      )}
-      {questions[currentQuestionIndex].text ==
-        "6. 現在500万以上の資産はありますか？" && (
-        <p className="text-[#00C300] font-bold my-7">資金</p>
-      )}
-      {questions[currentQuestionIndex].text ==
-        "11. あなたは金融について詳しいですか？" && (
-        <p className="text-[#00C300] font-bold my-7">自分</p>
-      )}
-      {questions[currentQuestionIndex].text ==
-        "16. リスクはあっても早く大きく資産が増える投資に魅力を感じますか？" && (
-        <p className="text-[#00C300] font-bold my-7">リスク</p>
-      )}
-      <div className="w-full max-w-2xl bg-white p-6 rounded-lg shadow-lg animate-fadeInUp">
-        <h2 className="text-2xl font-bold text-[#00C300] mb-4">
-          {questions[currentQuestionIndex].text}
-        </h2>
-
-        <div className="space-y-3">
-          <button
-            onClick={() =>
-              handleAnswer(questions[currentQuestionIndex].points.yes)
-            }
-            className="block w-full text-left !border-2 !border-[#ddd] p-4 rounded-lg bg-[#e0f7e9]  transition-transform hover:scale-102 hover:!bg-[#f5f5f5] focus:!outline-none"
+    <div className="bg-gradient-to-br from-[#e0f7e9] to-[rgb(200,240,216)] p-6">
+      <div
+        className="flex flex-col items-center min-h-screen p-6 animated-quiz"
+        style={{ animationDelay: "0.2s" }}
+      >
+        {questions[currentQuestionIndex].text ==
+          "1. 現在ご結婚されてますか？" && (
+          <motion.p
+            variants={fadeInUpStrong}
+            initial="hidden"
+            animate="visible"
+            className="text-[#00C300] font-bold mt-7 mb-3 bg-[#D8F7C5] w-full md:max-w-2xl text-center p-3 rounded-lg"
           >
-            はい
-          </button>
-          <button
-            onClick={() =>
-              handleAnswer(questions[currentQuestionIndex].points.no)
-            }
-            className="block w-full text-left !border-2 !border-[#ddd] p-4 rounded-lg bg-[#e0f7e9]  transition-transform hover:scale-102 hover:!bg-[#f5f5f5] focus:!outline-none"
+            家族
+          </motion.p>
+        )}
+        {questions[currentQuestionIndex].text ==
+          "6. 現在500万以上の資産はありますか？" && (
+          <motion.p
+            variants={fadeInUpStrong}
+            initial="hidden"
+            animate="visible"
+            className="text-[#00C300] font-bold mt-7 mb-3 bg-[#D8F7C5] w-full md:max-w-2xl text-center p-3 rounded-lg"
           >
-            いいえ
-          </button>
-        </div>
+            資金
+          </motion.p>
+        )}
+        {questions[currentQuestionIndex].text ==
+          "11. あなたは金融について詳しいですか？" && (
+          <motion.p
+            variants={fadeInUpStrong}
+            initial="hidden"
+            animate="visible"
+            className="text-[#00C300] font-bold mt-7 mb-3 bg-[#D8F7C5] w-full md:max-w-2xl text-center p-3 rounded-lg"
+          >
+            自分
+          </motion.p>
+        )}
+        {questions[currentQuestionIndex].text ==
+          "16. リスクはあっても早く大きく資産が増える投資に魅力を感じますか？" && (
+          <motion.p
+            variants={fadeInUpStrong}
+            initial="hidden"
+            animate="visible"
+            className="text-[#00C300] font-bold mt-7 mb-3 bg-[#D8F7C5] w-full md:max-w-2xl text-center p-3 rounded-lg"
+          >
+            リスク
+          </motion.p>
+        )}
+        <motion.div
+          key={currentQuestionIndex}
+          variants={fadeInUpStrong}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="w-full max-w-2xl bg-white p-6 rounded-lg shadow-lg"
+        >
+          <h2 className="text-2xl font-bold text-[#00C300] mb-4">
+            {questions[currentQuestionIndex].text}
+          </h2>
+          <div className="space-y-3 ">
+            <button
+              onClick={() =>
+                handleAnswer(questions[currentQuestionIndex].points.yes)
+              }
+              className="block w-full text-left !border-2 !border-[#ddd] p-4 rounded-lg bg-[#e0f7e9]  transition-transform hover:scale-102 hover:!bg-[#f5f5f5] focus:!outline-none"
+            >
+              はい
+            </button>
+            <button
+              onClick={() =>
+                handleAnswer(questions[currentQuestionIndex].points.no)
+              }
+              className="block w-full text-left !border-2 !border-[#ddd] p-4 rounded-lg bg-[#e0f7e9]  transition-transform hover:scale-102 hover:!bg-[#f5f5f5] focus:!outline-none"
+            >
+              いいえ
+            </button>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

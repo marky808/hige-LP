@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { FaHeart, FaShieldAlt } from "react-icons/fa";
 import { FaBolt } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import "../assets/css/animation.css";
 
 const PersonalRisk = () => {
   const navigate = useNavigate();
@@ -11,16 +12,22 @@ const PersonalRisk = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#D0F2DD]">
-      <div className="w-11/12 max-w-xl bg-white rounded-2xl shadow-lg overflow-hidden animate-fadeInUp">
+    <div className="flex items-center justify-center min-h-screen bg-[#D0F2DD] animated">
+      <div className="w-11/12 max-w-xl bg-white rounded-2xl shadow-lg overflow-hidden">
         {/* Header */}
-        <header className="bg-gradient-to-r from-[#00c300] to-[#009900] text-white text-center !py-[40px] !px-6">
+        <header
+          className="bg-gradient-to-r from-[#00c300] to-[#009900] text-white text-center !py-[40px] !px-6 animated"
+          style={{ animationDelay: "0.2s" }}
+        >
           <p className="text-4xl font-bold mb-6">パーソナルタイプ診断</p>
           <p className="text-lg">あなたの未来を守るための第一歩</p>
         </header>
         {/* Main Content */}
         <main className="px-4 py-8 text-center">
-          <div className="flex justify-around flex-wrap space-y-4 md:space-y-0">
+          <div
+            className="flex justify-around flex-wrap space-y-4 md:space-y-0 animated"
+            style={{ animationDelay: "0.4s" }}
+          >
             <Feature
               icon={
                 <div className="text-[#00C300] text-4xl">
@@ -47,21 +54,25 @@ const PersonalRisk = () => {
             />
           </div>
 
-          <p className="text-gray-700 my-6">
+          <p className="text-gray-700 my-[60px]">
             今すぐあなたのキャッシュフローのリスクをチェックし、将来の不安要素を解消しましょう。
           </p>
 
           {/* CTA Button */}
           <button
             onClick={() => navigate("/quiz")}
-            className="!bg-[#00c300] text-white font-semibold !py-4 !px-8 !rounded-full shadow-lg hover:bg-[#009900] transition-all focus:!outline-none"
+            className="!bg-[#00c300] text-white font-semibold !py-4 !px-8 !rounded-full shadow-lg hover:bg-[#009900] transition-all focus:!outline-none animated"
+            style={{ animationDelay: "0.6s" }}
           >
             診断を始める
           </button>
         </main>
 
         {/* Footer */}
-        <footer className="text-center py-4 text-gray-500 text-sm">
+        <footer
+          className="text-center py-4 text-gray-500 text-sm animated"
+          style={{ animationDelay: "0.8s" }}
+        >
           &copy; 2025 パーソナルリスク診断 All Rights Reserved.
         </footer>
       </div>

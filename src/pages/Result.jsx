@@ -67,14 +67,14 @@ const Result = () => {
             診断中...
           </button>
         ) : (
-          <div className="bg-white p-8 rounded-lg shadow-lg md:w-[600px] md:min-h-[300px] text-center -mt-36">
+          <div className="bg-white p-8 rounded-lg shadow-lg md:w-[600px] md:min-h-[300px] text-center md:-mt-36">
             <h1 className="!text-4xl font-semibold text-[#00c300] mb-8">
               {result.title}
             </h1>
-            <div className="text-lg font-semibold text-[#007700] mb-8">
+            <div className="text-2xl font-semibold text-[#007700] mb-8">
               あなたの得点: {totalScore} 点
             </div>
-            <p className="text-gray-600 mb-4">{result.description}</p>
+            <p className="text-lg text-gray-600 mb-4">{result.description}</p>
             <button
               onClick={() => navigate("/personal-risk")}
               className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl focus:!outline-none"
