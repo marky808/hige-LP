@@ -11,7 +11,7 @@ import {
 
 const LineButton = ({ className = "", size = "normal" }) => (
     <button
-    className={`
+        className={`
       flex items-center justify-center space-x-3
       ${size === "large" ? "px-8 py-4 !text-xl" : "px-6 py-3 text-base"}
       !bg-green-500 hover:bg-green-600 
@@ -30,7 +30,7 @@ const LineButton = ({ className = "", size = "normal" }) => (
     </button>
 );
 
-const LandingPage = () => {
+const HigeLp = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -54,7 +54,6 @@ const LandingPage = () => {
 
     return (
         <div className="relative min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
-            {/* Fixed Header */}
             <header className="fixed top-0 w-full bg-white shadow-md z-50">
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex items-center justify-between">
@@ -71,7 +70,6 @@ const LandingPage = () => {
                 </div>
             </header>
 
-            {/* Main Content */}
             <main className="container mx-auto px-4 pt-24 pb-16">
                 <section className="max-w-4xl mx-auto mb-20">
                     <div className="bg-gradient-to-br from-blue-50 via-white to-green-50 rounded-3xl shadow-xl p-8 md:p-12">
@@ -83,7 +81,7 @@ const LandingPage = () => {
                                     </span>
                                 </div>
                             </div>
-                            <h2 className="text-5xl md:text-6xl font-extrabold">
+                            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold">
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">
                                     パーソナル
                                 </span>
@@ -108,7 +106,6 @@ const LandingPage = () => {
                     </div>
                 </section>
 
-                {/* Part 2 */}
                 <section className="max-w-4xl mx-auto mb-20">
                     <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12">
                         <div className="max-w-3xl mx-auto">
@@ -142,7 +139,6 @@ const LandingPage = () => {
                     </div>
                 </section>
 
-                {/* Part 3 */}
                 <section className="max-w-4xl mx-auto mb-20">
                     <div className="bg-gradient-to-br from-red-100 via-white to-red-50 rounded-3xl shadow-lg p-8 md:p-12">
                         <div className="text-center mb-12">
@@ -163,7 +159,6 @@ const LandingPage = () => {
                     </div>
                 </section>
 
-                {/* Part 4 */}
                 <section className="max-w-4xl mx-auto mb-20">
                     <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12">
                         <div className="text-center mb-12">
@@ -217,7 +212,6 @@ const LandingPage = () => {
                     </div>
                 </section>
 
-                {/* Part 5 */}
                 <section className="max-w-4xl mx-auto mb-20">
                     <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12">
                         <div className="text-center mb-12">
@@ -249,7 +243,7 @@ const LandingPage = () => {
                     </div>
                 </section>
             </main>
-            {/* Footer */}
+
             <footer className="bg-gray-800 text-white py-8">
                 <div className="container mx-auto px-4 text-center">
                     <div className="flex items-center justify-center mb-4">
@@ -267,4 +261,4 @@ const LandingPage = () => {
     );
 };
 
-export default LandingPage;
+export default HigeLp;

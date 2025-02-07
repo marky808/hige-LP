@@ -8,7 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
 import EBook from "./pages/EBook";
-import LandingPage from "./pages/HigeLp";
+import HigeLp from "./pages/HigeLp";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       <Route path="/personal-risk" element={<PersonalRisk />} />
       <Route path="/quiz" element={<Quiz />} />
       <Route path="/result" element={<Result />} />
-      <Route path="/hige-lp" element={<LandingPage />} />
+      <Route path="/hige-lp" element={<HigeLp />} />
     </Routes>
   );
 }
