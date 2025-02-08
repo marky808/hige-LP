@@ -21,7 +21,7 @@ const Chapter0 = () => {
     return (
         <div className="bg-[#f7fafc] h-full p-5 flex justify-center items-center px-4">
             <div className="max-w-3xl w-[800px] mx-auto bg-white rounded-lg shadow-lg p-8">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#2c5282] border-b-3 border-[#4299e1] pb-4 mb-8 font-bold">
+                <h3 className="text-xl sm:text-2xl md:text-[4vw] lg:text-[32px] text-[#2c5282] border-b-3 border-[#4299e1] pb-4 mb-8 font-bold">
                     第0章 お金があればしあわせ？
                 </h3>
                 <div className="space-y-4">
@@ -105,13 +105,13 @@ const Chapter0 = () => {
                 <div className="flex justify-between mt-12 pt-4 border-t border-gray-200">
                     <a
                         onClick={goBackToEbook}
-                        className="text-blue-800 border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
+                        className="!text-[#2c5282] border border-[#2c5282] rounded px-4 py-2 hover:bg-[#2c5282] hover:!text-white cursor-pointer"
                     >
                         目次へ戻る
                     </a>
                     <a
                         onClick={goToChapter1}
-                        className="text-blue-800 border border-blue-800 rounded px-4 py-2 hover:bg-blue-800 hover:!text-white cursor-pointer"
+                        className="!text-[#2c5282] border border-[#2c5282] rounded px-4 py-2 hover:bg-[#2c5282] hover:!text-white cursor-pointer"
                     >
                         次の章へ
                     </a>
