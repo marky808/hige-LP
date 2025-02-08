@@ -154,7 +154,7 @@ const PersonalTypePageQuiz = () => {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="w-full max-w-2xl bg-white p-6 rounded-lg shadow-lg"
+          className="w-full md:max-w-[700px] bg-white p-6 rounded-lg shadow-lg"
         >
           <h2 className="text-2xl font-bold text-[#00C300] mb-4">
             {questions[currentQuestionIndex].text}
