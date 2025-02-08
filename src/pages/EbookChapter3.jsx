@@ -20,11 +20,11 @@ const Chapter3 = () => {
     };
     return (
         <div className="bg-[#f7fafc] h-full p-5 flex justify-center items-center px-4">
-            <div className="bg-white max-w-3xl w-[800px] shadow-md rounded-lg p-6 md:p-8 mb-8 text-left">
+            <div className="bg-white max-w-3xl w-[800px] shadow-md rounded-lg p-5 md:p-8 mb-8 text-left">
                 <h3 className="text-xl sm:text-2xl md:text-[4vw] lg:text-[32px] text-[#2c5282] border-b-3 border-[#4299e1] pb-4 mb-8 font-bold">
                     第3章 よくある失敗例と伝えたいこと
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-4 !text-[#213547]">
                     <p className="text-base leading-relaxed">
                         最後によくある失敗例についてお伝えします。
                     </p>
@@ -88,7 +88,7 @@ const Chapter3 = () => {
                 <h3 className="text-lg sm:text-xl md:text-[3vw] lg:text-xl text-[#2c5282] border-b-3 border-blue-500 pb-4 mb-8 font-bold">
                     1.金融業界は宗教的な要素がある
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-4 !text-[#213547]">
                     <p className="text-base leading-relaxed">
                         なんか怖いですか？笑
                     </p>
@@ -122,7 +122,7 @@ const Chapter3 = () => {
                 <h3 className="text-lg sm:text-xl md:text-[3vw] lg:text-xl text-[#2c5282] border-b-3 border-blue-500 pb-4 mb-8 font-bold">
                     2.自分でやるか任せるか
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-4 !text-[#213547]">
                     <p className="text-base leading-relaxed">
                         これが中途半端な人は失敗します。
                     </p>
@@ -146,7 +146,7 @@ const Chapter3 = () => {
                 <h3 className="text-lg sm:text-xl md:text-[3vw] lg:text-xl text-[#2c5282] border-b-3 border-blue-500 pb-4 mb-8 font-bold">
                     資産形成に成功する(可能性が高い)人の特徴はズバリこの２つ！
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-4 !text-[#213547]">
                     <p className="text-base leading-relaxed">①賢い人</p>
                     <p className="text-base leading-relaxed">
                         →お金や金融は社会の血液なんて呼ばれたりしています。
@@ -217,7 +217,7 @@ const Chapter3 = () => {
                         目次へ戻る
                     </a>
                 </div>
-                <footer className="text-center py-8 text-gray-600 text-sm">
+                <footer className="text-center py-6 md:py-8 text-gray-600 text-sm">
                     <p className="text-base">※本E-bookの無断転載・共有は禁止させていただきます。</p>
                     <p className="text-base mt-6">Copyright © 2025 All Rights Reserved.</p>
                 </footer>

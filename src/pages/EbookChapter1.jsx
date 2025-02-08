@@ -24,11 +24,11 @@ const Chapter1 = () => {
     };
     return (
         <div className="bg-[#f7fafc] h-full p-5 flex justify-center items-center px-4">
-            <div className="bg-white max-w-3xl w-[800px] shadow-md rounded-lg p-6 md:p-8 mb-8 text-left">
+            <div className="bg-white max-w-3xl w-[800px] shadow-md rounded-lg p-5 md:p-8 mb-8 text-left">
                 <h3 className="text-xl sm:text-2xl md:text-[4vw] lg:text-[32px] text-[#2c5282] border-b-3 border-[#4299e1] pb-4 mb-8 font-bold">
                     第1章 資産形成に正解はあるか？
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-4 !text-[#213547]">
                     <p className="text-base leading-relaxed">
                         資産形成に正解はある？
                     </p>

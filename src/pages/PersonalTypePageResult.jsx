@@ -47,7 +47,7 @@ const PersonalTypePageResult = () => {
       }
       setResult({ title, description1, description2 });
       setLoading(false);
-    }, 2000); // Simulating loading time
+    }, 1000); // Simulating loading time
   }, []);
 
   return (

@@ -164,7 +164,7 @@ const PersonalTypePageQuiz = () => {
               onClick={() =>
                 handleAnswer(questions[currentQuestionIndex].points.yes)
               }
-              className="block w-full text-left !border-2 !border-[#ddd] p-4 rounded-lg bg-[#e0f7e9]  transition-transform hover:scale-102 hover:!bg-[#f5f5f5] focus:!outline-none"
+              className="block w-full text-left !border-2 !border-[#ddd] p-4 rounded-lg !bg-[#e0f7e9] !text-black transition-transform hover:scale-102 hover:!bg-[#f5f5f5] focus:!outline-none"
             >
               はい
             </button>
@@ -172,7 +172,7 @@ const PersonalTypePageQuiz = () => {
               onClick={() =>
                 handleAnswer(questions[currentQuestionIndex].points.no)
               }
-              className="block w-full text-left !border-2 !border-[#ddd] p-4 rounded-lg bg-[#e0f7e9]  transition-transform hover:scale-102 hover:!bg-[#f5f5f5] focus:!outline-none"
+              className="block w-full text-left !border-2 !border-[#ddd] p-4 rounded-lg !bg-[#e0f7e9] !text-black transition-transform hover:scale-102 hover:!bg-[#f5f5f5] focus:!outline-none"
             >
               いいえ
             </button>

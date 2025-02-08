@@ -20,11 +20,11 @@ const Chapter0 = () => {
     };
     return (
         <div className="bg-[#f7fafc] h-full p-5 flex justify-center items-center px-4">
-            <div className="max-w-3xl w-[800px] mx-auto bg-white rounded-lg shadow-lg p-8">
+            <div className="max-w-3xl w-[800px] mx-auto bg-white rounded-lg shadow-lg p-5 md:p-8">
                 <h3 className="text-xl sm:text-2xl md:text-[4vw] lg:text-[32px] text-[#2c5282] border-b-3 border-[#4299e1] pb-4 mb-8 font-bold">
                     第0章 お金があればしあわせ？
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-4 !text-[#213547]">
                     <p className="text-base leading-relaxed">
                         そもそも大前提、お金があれば幸せなんでしょうか？
                     </p>

@@ -8,7 +8,7 @@ const PersonalType = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "パーソナルリスク診断 - あなたの未来を守る";
+    document.title = "パーソナルタイプ診断";
   }, []);
 
   return (

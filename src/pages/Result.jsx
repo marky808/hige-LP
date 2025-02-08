@@ -32,7 +32,7 @@ const Result = () => {
       }
       setResult({ title, description });
       setLoading(false);
-    }, 2000); // Simulating loading time
+    }, 1000); // Simulating loading time
   }, []);
 
   return (
@@ -67,7 +67,7 @@ const Result = () => {
             診断中...
           </button>
         ) : (
-          <div className="bg-white p-8 rounded-lg shadow-lg md:w-[600px] md:min-h-[300px] text-center md:-mt-36">
+          <div className="bg-white p-8 rounded-lg shadow-lg md:w-[600px] md:min-h-[300px] text-center -mt-15 md:-mt-36">
             <h1 className="!text-4xl font-semibold text-[#00c300] mb-8">
               {result.title}
             </h1>
