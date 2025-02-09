@@ -102,6 +102,10 @@ const questions = [
 const PersonalTypePageQuiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [totalScore, setTotalScore] = useState(0);
+  const [totalScoreFamily, setTotalScoreFamily] = useState(0);
+  const [totalScoreCapital, setTotalScoreCapital] = useState(0);
+  const [totalScoreSelf, setTotalScoreSelf] = useState(0);
+  const [totalScoreRisk, setTotalScoreRisk] = useState(0);
   const navigate = useNavigate();
 
   const fadeInUpStrong = {
@@ -125,10 +129,27 @@ const PersonalTypePageQuiz = () => {
 
   const handleAnswer = (points) => {
     setTotalScore(totalScore + points);
+    if (questions[currentQuestionIndex].category == "家族") {
+      setTotalScoreFamily(totalScoreFamily + points);
+    }
+    else if (questions[currentQuestionIndex].category == "資金") {
+      setTotalScoreCapital(totalScoreCapital + points);
+    }
+    else if (questions[currentQuestionIndex].category == "自分") {
+      setTotalScoreSelf(totalScoreSelf + points);
+    }
+    else if (questions[currentQuestionIndex].category == "リスク") {
+      setTotalScoreRisk(totalScoreRisk + points);
+    }
+
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       localStorage.setItem("typeTotalScore", totalScore);
+      localStorage.setItem("typeTotalScoreFamily", totalScoreFamily);
+      localStorage.setItem("typeTotalScoreCapital", totalScoreCapital);
+      localStorage.setItem("typeTotalScoreSelf", totalScoreSelf);
+      localStorage.setItem("typeTotalScoreRisk", totalScoreRisk);
       navigate("/personal-type/result");
     }
   };

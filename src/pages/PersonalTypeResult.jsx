@@ -1,51 +1,83 @@
 import { useEffect, useState } from "react";
 import { FaLine } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { PersonalTypes } from "./PersonalTypes";
+import { title } from "motion/react-client";
 
 const PersonalTypePageResult = () => {
   const navigate = useNavigate();
   const [totalScore, setTotalScore] = useState(null);
   const [loading, setLoading] = useState(true);
   const [result, setResult] = useState({
+    resFamily: "",
+    resCapital: "",
+    resSelf: "",
+    resRisk: "",
     title: "",
-    description1: "",
-    description2: "",
-  });
+    description: "",
+    investment: "",
+    details: [
+    ],
+    recommendations: [
+    ],
+    expertise: "",
+    riskTolerance: "",
+    familyFocus: "",
+    wealthLevel: ""
+});
 
   useEffect(() => {
     setTimeout(() => {
       const score = parseInt(localStorage.getItem("typeTotalScore"), 10) || 0;
       setTotalScore(score);
-      let title = "";
-      let description1 = "";
-      let description2 = "";
 
-      if (score > 30) {
-        title = "できることからコツコツタイプ";
-        description1 =
-          "謙虚で現実的なあなたは、小さな努力の積み重ねが将来大きな成果へとつながるはずです。";
-        description2 =
-          "向いている投資→ライフプランニングの作成、支出の削減、保険の見直し、転職、副業";
-      } else if (score >= 20) {
-        title = "できることからコツコツタイプ";
-        description1 =
-          "謙虚で現実的なあなたは、小さな努力の積み重ねが将来大きな成果へとつながるはずです。";
-        description2 =
-          "向いている投資→ライフプランニングの作成、支出の削減、保険の見直し、転職、副業";
-      } else if (score >= 10) {
-        title = "できることからコツコツタイプ";
-        description1 =
-          "謙虚で現実的なあなたは、小さな努力の積み重ねが将来大きな成果へとつながるはずです。";
-        description2 =
-          "向いている投資→ライフプランニングの作成、支出の削減、保険の見直し、転職、副業";
-      } else {
-        title = "できることからコツコツタイプ";
-        description1 =
-          "謙虚で現実的なあなたは、小さな努力の積み重ねが将来大きな成果へとつながるはずです。";
-        description2 =
-          "向いている投資→ライフプランニングの作成、支出の削減、保険の見直し、転職、副業";
-      }
-      setResult({ title, description1, description2 });
+      const totalScoreFamily = parseInt(localStorage.getItem("typeTotalScoreFamily"), 10) || 0;
+      const totalScoreCapital = parseInt(localStorage.getItem("typeTotalScoreCapital"), 10) || 0;
+      const totalScoreSelf = parseInt(localStorage.getItem("typeTotalScoreSelf"), 10) || 0;
+      const totalScoreRisk = parseInt(localStorage.getItem("typeTotalScoreRisk"), 10) || 0;
+
+      const isFamilyHi = (totalScoreFamily >= 3 ? true : false)
+      const isCapitalHi = (totalScoreCapital >= 3 ? true : false)
+      const isSelfHi = (totalScoreSelf >= 3 ? true : false)
+      const isRiskHi = (totalScoreRisk >= 3 ? true : false)
+
+      const resFamily = (isFamilyHi ? "○" : "×")
+      const resCapital = (isCapitalHi ? "○" : "×")
+      const resSelf = (isSelfHi ? "○" : "×")
+      const resRisk = (isRiskHi ? "○" : "×")
+
+      const type =
+        (isFamilyHi ? "1" : "0") +
+        (isCapitalHi ? "1" : "0") +
+        (isSelfHi ? "1" : "0") +
+        (isRiskHi ? "1" : "0");
+
+      let title = PersonalTypes[type].title
+      let description = PersonalTypes[type].description
+      let investment = PersonalTypes[type].investment
+      let details = PersonalTypes[type].details
+      let recommendations = PersonalTypes[type].recommendations
+      let expertise = PersonalTypes[type].expertise
+      let riskTolerance = PersonalTypes[type].riskTolerance
+      let familyFocus = PersonalTypes[type].familyFocus
+      let wealthLevel = PersonalTypes[type].wealthLevel
+
+      setResult({
+        resFamily,
+        resCapital,
+        resSelf,
+        resRisk,
+        title,
+        description,
+        investment,
+        details,
+        recommendations,
+        expertise,
+        riskTolerance,
+        familyFocus,
+        wealthLevel
+      });
+
       setLoading(false);
     }, 1000); // Simulating loading time
   }, []);
@@ -87,10 +119,13 @@ const PersonalTypePageResult = () => {
               {result.title}
             </h1>
             <div className="text-2xl font-semibold text-[#007700] mb-8">
-              【家族】×　【資金】×　【自分】×　【リスク】×
+              【家族】{result.resFamily}
+              【資金】{result.resCapital}
+              【自分】{result.resSelf}
+              【リスク】{result.resRisk}
             </div>
-            <p className="text-gray-600 mb-4">{result.description1}</p>
-            <p className="text-gray-600 mb-4">{result.description2}</p>
+            <p className="text-gray-600 mb-4">{result.description}</p>
+            <p className="text-gray-600 mb-4">{result.investment}</p>
             <button
               onClick={() => navigate("/personal-type")}
               className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl focus:!outline-none"
