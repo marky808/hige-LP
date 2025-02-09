@@ -166,7 +166,7 @@ const PersonalRiskQuiz = () => {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       localStorage.setItem("riskTotalScore", newScore);
-      navigate("/result");
+      navigate("/personal-risk/result");
     }
   };
 

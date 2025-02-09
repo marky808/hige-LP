@@ -5,96 +5,96 @@ import { motion } from "motion/react";
 const questions = [
   {
     category: "家族",
-    text: "1. 現在ご結婚されてますか？",
+    text: "現在ご結婚されてますか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "家族",
-    text: "2. 未成年のお子さんはいらっしゃいますか？",
+    text: "未成年のお子さんはいらっしゃいますか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "家族",
-    text: "3. あなたの収入がないと家計が成り立ちませんか？",
+    text: "あなたの収入がないと家計が成り立ちませんか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "家族",
-    text: "4. 自分にもしものことがあった時、家族の生活が不安ですか？",
+    text: "自分にもしものことがあった時、家族の生活が不安ですか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "家族",
-    text: "5. 自宅はあなた名義の持ち家ですか？",
+    text: "自宅はあなた名義の持ち家ですか？",
     points: { yes: 7, no: 0 } },
   {
     category: "資金",
-    text: "6. 現在500万以上の資産はありますか？",
+    text: "現在500万以上の資産はありますか？",
     points: { yes: 7, no: 0 } },
   {
     category: "資金",
-    text: "7. 世帯年収は1000万円以上ですか？",
+    text: "世帯年収は1000万円以上ですか？",
     points: { yes: 7, no: 0 } },
   {
     category: "資金",
-    text: "8. 特に大きな出費がない月は毎月5万円以上の貯蓄はできますか？",
+    text: "特に大きな出費がない月は毎月5万円以上の貯蓄はできますか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "資金",
-    text: "9. いまの収入は安定していますか？",
+    text: "いまの収入は安定していますか？",
     points: { yes: 7, no: 0 } },
   {
     category: "資金",
-    text: "10. 職場が潰れても一年以内には収入に戻せますか？",
+    text: "職場が潰れても一年以内には収入に戻せますか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "自分",
-    text: "11. あなたは金融について詳しいですか？",
+    text: "あなたは金融について詳しいですか？",
     points: { yes: 7, no: 0 } },
   {
     category: "自分",
-    text: "12. 投資や保険に関する知識を自ら身につけたいと思いますか？",
+    text: "投資や保険に関する知識を自ら身につけたいと思いますか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "自分",
-    text: "13. 資産運用中の大きな下落にも冷静に対応できますか？",
+    text: "資産運用中の大きな下落にも冷静に対応できますか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "自分",
-    text: "14. ライフステージの変化に合わせ、資産を見直すことができますか？",
+    text: "ライフステージの変化に合わせ、資産を見直すことができますか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "自分",
-    text: "15. 全て自分で解決したいと思いますか？",
+    text: "全て自分で解決したいと思いますか？",
     points: { yes: 7, no: 0 } },
   {
     category: "リスク",
-    text: "16. リスクはあっても早く大きく資産が増える投資に魅力を感じますか？",
+    text: "リスクはあっても早く大きく資産が増える投資に魅力を感じますか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "リスク",
-    text: "17. 100倍になる可能性がある投資は魅力的ですか？",
+    text: "100倍になる可能性がある投資は魅力的ですか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "リスク",
-    text: "18. 投資で損失が出ても自己責任で受け入れられますか？",
+    text: "投資で損失が出ても自己責任で受け入れられますか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "リスク",
-    text: "19. 投資に失敗しても取り返すチャンスがあると思いますか？",
+    text: "投資に失敗しても取り返すチャンスがあると思いますか？",
     points: { yes: 7, no: 0 },
   },
   {
     category: "リスク",
-    text: "20. 自分の資産を客観的に扱えますか？",
+    text: "自分の資産を客観的に扱えますか？",
     points: { yes: 7, no: 0 }
   },
 ];
@@ -129,7 +129,7 @@ const PersonalTypePageQuiz = () => {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       localStorage.setItem("typeTotalScore", totalScore);
-      navigate("/personal-type/result"); // Redirect to result page
+      navigate("/personal-type/result");
     }
   };
 
