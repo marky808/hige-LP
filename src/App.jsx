@@ -16,6 +16,7 @@ import PersonalTypeResult from "./pages/PersonalTypeResult";
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<HigeLp />} />
       <Route path="/hige-lp" element={<HigeLp />} />
       <Route path="/ebook" element={<EBook />} />
       <Route path="/ebook/chapter0" element={<Chapter0 />} />

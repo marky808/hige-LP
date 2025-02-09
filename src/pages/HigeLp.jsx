@@ -239,7 +239,7 @@ const HigeLp = () => {
                                 </div>
 
                                 <div className="grid md:grid-cols-1 gap-8">
-                                    <div onClick={() => navigate("/personal-risk")} className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition-all cursor-pointer">
+                                    <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition-all">
                                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
                                             <TrendingUp className="w-8 h-8 text-green-600" />
                                         </div>
@@ -256,7 +256,7 @@ const HigeLp = () => {
                                         </div>
                                     </div>
 
-                                    <div onClick={() => navigate("/personal-type")} className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition-all cursor-pointer">
+                                    <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition-all">
                                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
                                             <CheckCircle className="w-8 h-8 text-green-600" />
                                         </div>
@@ -273,7 +273,7 @@ const HigeLp = () => {
                                         </div>
                                     </div>
 
-                                    <div onClick={() => navigate("/ebook")} className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition-all cursor-pointer">
+                                    <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition-all">
                                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
                                             <FileText className="w-8 h-8 text-green-600" />
                                         </div>
