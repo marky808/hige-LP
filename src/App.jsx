@@ -5,32 +5,29 @@ import Chapter1 from "./pages/EbookChapter1";
 import Chapter2 from "./pages/EbookChapter2";
 import Chapter3 from "./pages/EbookChapter3";
 import { Routes, Route } from "react-router-dom";
-import Quiz from "./pages/Quiz";
-import Result from "./pages/Result";
+import PersonalRiskQuiz from "./pages/PersonalRiskQuiz";
+import PersonalRiskResult from "./pages/PersonalRiskResult";
 import EBook from "./pages/EBook";
 import HigeLp from "./pages/HigeLp";
 import PersonalType from "./pages/PersonalType";
-import PersonalTypePageQuiz from "./pages/PersonalTypePageQuiz";
-import PersonalTypePageResult from "./pages/PersonalTypePageResult";
+import PersonalTypeQuiz from "./pages/PersonalTypeQuiz";
+import PersonalTypeResult from "./pages/PersonalTypeResult";
 
 function App() {
   return (
     <Routes>
+      <Route path="/hige-lp" element={<HigeLp />} />
       <Route path="/ebook" element={<EBook />} />
       <Route path="/ebook/chapter0" element={<Chapter0 />} />
       <Route path="/ebook/chapter1" element={<Chapter1 />} />
       <Route path="/ebook/chapter2" element={<Chapter2 />} />
       <Route path="/ebook/chapter3" element={<Chapter3 />} />
       <Route path="/personal-risk" element={<PersonalRisk />} />
-      <Route path="/quiz" element={<Quiz />} />
-      <Route path="/result" element={<Result />} />
-      <Route path="/hige-lp" element={<HigeLp />} />
+      <Route path="/personal-risk/quiz" element={<PersonalRiskQuiz />} />
+      <Route path="/personal-risk/result" element={<PersonalRiskResult />} />
       <Route path="/personal-type" element={<PersonalType />} />
-      <Route path="/personal-type/quiz" element={<PersonalTypePageQuiz />} />
-      <Route
-        path="/personal-type/result"
-        element={<PersonalTypePageResult />}
-      />
+      <Route path="/personal-type/quiz" element={<PersonalTypeQuiz />} />
+      <Route path="/personal-type/result" element={<PersonalTypeResult />} />
     </Routes>
   );
 }
