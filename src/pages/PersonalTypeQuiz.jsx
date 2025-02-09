@@ -139,50 +139,15 @@ const PersonalTypePageQuiz = () => {
         className="flex flex-col items-center min-h-screen p-6 animated-quiz"
         style={{ animationDelay: "0.2s" }}
       >
-        {questions[currentQuestionIndex].text ==
-          "1. 現在ご結婚されてますか？" && (
-          <motion.p
-            variants={fadeInUpStrong}
-            initial="hidden"
-            animate="visible"
-            className="text-[#00C300] font-bold mt-7 mb-3 bg-[#D8F7C5] w-full md:max-w-2xl text-center p-3 rounded-lg"
-          >
-            家族
-          </motion.p>
-        )}
-        {questions[currentQuestionIndex].text ==
-          "6. 現在500万以上の資産はありますか？" && (
-          <motion.p
-            variants={fadeInUpStrong}
-            initial="hidden"
-            animate="visible"
-            className="text-[#00C300] font-bold mt-7 mb-3 bg-[#D8F7C5] w-full md:max-w-2xl text-center p-3 rounded-lg"
-          >
-            資金
-          </motion.p>
-        )}
-        {questions[currentQuestionIndex].text ==
-          "11. あなたは金融について詳しいですか？" && (
-          <motion.p
-            variants={fadeInUpStrong}
-            initial="hidden"
-            animate="visible"
-            className="text-[#00C300] font-bold mt-7 mb-3 bg-[#D8F7C5] w-full md:max-w-2xl text-center p-3 rounded-lg"
-          >
-            自分
-          </motion.p>
-        )}
-        {questions[currentQuestionIndex].text ==
-          "16. リスクはあっても早く大きく資産が増える投資に魅力を感じますか？" && (
-          <motion.p
-            variants={fadeInUpStrong}
-            initial="hidden"
-            animate="visible"
-            className="text-[#00C300] font-bold mt-7 mb-3 bg-[#D8F7C5] w-full md:max-w-2xl text-center p-3 rounded-lg"
-          >
-            リスク
-          </motion.p>
-        )}
+        <motion.p
+          variants={fadeInUpStrong}
+          initial="hidden"
+          animate="visible"
+          className="text-[#00C300] font-bold mt-7 mb-3 bg-[#D8F7C5] w-full md:max-w-2xl text-center p-3 rounded-lg"
+        >
+          {questions[currentQuestionIndex].category}
+        </motion.p>
+
         <motion.div
           key={currentQuestionIndex}
           variants={fadeInUpStrong}
@@ -213,6 +178,15 @@ const PersonalTypePageQuiz = () => {
             </button>
           </div>
         </motion.div>
+
+        <motion.p
+          variants={fadeInUpStrong}
+          initial="hidden"
+          animate="visible"
+          className="text-[#00C300] font-bold mb-3 mt-[14px] bg-[#D8F7C5] w-full md:max-w-[700px] text-center p-3 rounded-lg"
+        >
+          {currentQuestionIndex + 1} / {questions.length}
+        </motion.p>
       </div>
     </div>
   );
