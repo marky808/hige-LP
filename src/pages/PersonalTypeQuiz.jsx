@@ -179,14 +179,34 @@ const PersonalTypePageQuiz = () => {
           </div>
         </motion.div>
 
-        <motion.p
+        <motion.div
+          variants={fadeInUpStrong}
+          initial="hidden"
+          animate="visible"
+          className="w-full md:max-w-[700px] bg-white rounded-lg shadow-lg mt-[20px] bg-[#D8F7C5]"
+        >
+        <div className="bg-[#D8F7C5] ">
+          <div className="h-2 bg-gray-100 rounded-full">
+            <div
+              className="h-2 bg-green-500 rounded-full transition-all duration-300"
+              style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
+            ></div>
+            </div>
+            <p className="text-center text-sm text-gray-600">
+              {currentQuestionIndex + 1} / {questions.length}
+            </p>
+          </div>
+        </motion.div>
+
+        {/* <motion.p
           variants={fadeInUpStrong}
           initial="hidden"
           animate="visible"
           className="text-[#00C300] font-bold mb-3 mt-[14px] bg-[#D8F7C5] w-full md:max-w-[700px] text-center p-3 rounded-lg"
         >
           {currentQuestionIndex + 1} / {questions.length}
-        </motion.p>
+        </motion.p> */}
+
       </div>
     </div>
   );
