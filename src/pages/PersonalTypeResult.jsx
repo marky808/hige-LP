@@ -118,12 +118,12 @@ const PersonalTypePageResult = () => {
             <h1 className="!text-3xl font-semibold text-[#00c300] mb-8">
               {result.title}
             </h1>
-            <div className="text-2xl font-semibold text-[#007700] mb-8">
+            {/* <div className="text-2xl font-semibold text-[#007700] mb-8">
               【家族】{result.resFamily}
               【資金】{result.resCapital}
               【自分】{result.resSelf}
               【リスク】{result.resRisk}
-            </div>
+            </div> */}
             <p className="text-gray-600 mb-4">{result.description}</p>
             <p className="text-gray-600 mb-4">{result.investment}</p>
             <button
