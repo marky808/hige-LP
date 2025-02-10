@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { FaLine } from "react-icons/fa";
 import "../assets/css/ebook.module.css";
 
 const Chapter3 = () => {
@@ -203,7 +204,26 @@ const Chapter3 = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex justify-between mt-12 pt-4 border-t border-gray-200">
+                <div className="flex flex-col gap-4 justify-center items-center mt-6">
+                    <a
+                        href="https://www.jicoo.com/t/EGWbrqfX1y_B/e/Avza59cr"
+                        target="_blank"
+                        className="flex items-center text-center gap-x-2 !bg-[#00c300] hover:!bg-[#007700] !text-white !py-4 !px-8 !rounded-full shadow-lg !text-xl focus:!outline-none"
+                    >
+                        無料個別相談はこちらからお気軽に！
+                    </a>
+
+                    <button
+                        onClick={() => navigate("#")}
+                        className="flex items-center gap-x-2 !bg-[#00c300] hover:!bg-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl focus:!outline-none"
+                    >
+                        <div className="mr-2 text-2xl font-bold">
+                            <FaLine />
+                        </div>
+                        LINEに戻る
+                    </button>
+                </div>
+                <div className="flex justify-between items-center mt-10 pt-4 border-t border-gray-200">
                     <a
                         onClick={goToChapter2}
                         className="!text-[#2c5282] border border-[#2c5282] rounded px-4 py-2 hover:bg-[#2c5282] hover:!text-white cursor-pointer"
@@ -218,8 +238,12 @@ const Chapter3 = () => {
                     </a>
                 </div>
                 <footer className="text-center py-6 md:py-8 text-gray-600 text-sm">
-                    <p className="text-base">※本E-bookの無断転載・共有は禁止させていただきます。</p>
-                    <p className="text-base mt-6">Copyright © 2025 All Rights Reserved.</p>
+                    <p className="text-base">
+                        ※本E-bookの無断転載・共有は禁止させていただきます。
+                    </p>
+                    <p className="text-base mt-6">
+                        Copyright © 2025 All Rights Reserved.
+                    </p>
                 </footer>
             </div>
         </div>

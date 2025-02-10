@@ -61,7 +61,7 @@ const PersonalRisk = () => {
           {/* CTA Button */}
           <button
             onClick={() => navigate("/personal-risk/quiz")}
-            className="!bg-[#00c300] text-white font-semibold !py-4 !px-8 !rounded-full shadow-lg hover:bg-[#009900] transition-all focus:!outline-none animated"
+            className="!bg-[#00c300]  text-white font-semibold !py-4 !px-8 !rounded-full shadow-lg hover:!bg-[#009900] hover:!border-[#007700] transition-all focus:!outline-none animated"
             style={{ animationDelay: "0.6s" }}
           >
             診断を始める

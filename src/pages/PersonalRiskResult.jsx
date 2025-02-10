@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaLine } from "react-icons/fa";
+import { FaFileAlt, FaLine } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const PersonalRiskResult = () => {
@@ -77,12 +77,22 @@ const PersonalRiskResult = () => {
             <p className="text-lg text-gray-600 mb-4">{result.description}</p>
             <button
               onClick={() => navigate("/personal-risk")}
-              className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl focus:!outline-none"
+              className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] hover:!border-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl focus:!outline-none"
             >
               <div className="mr-2 text-2xl font-bold">
                 <FaLine />
               </div>
               LINEに戻る
+            </button>
+            <p className="text-lg text-gray-600 mb-4 mt-4">あなたに正しい投資感覚を植え付けるE-BOOKを見てみましょう！</p>
+            <button
+              onClick={() => navigate("/ebook")}
+              className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] hover:!border-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg !text-xl focus:!outline-none"
+            >
+              <div className="mr-2 text-2xl font-bold">
+                <FaFileAlt />
+              </div>
+              E-BOOK
             </button>
           </div>
         )}
