@@ -19,7 +19,7 @@ const PersonalRisk = () => {
           className="bg-gradient-to-r from-[#00c300] to-[#009900] text-white text-center !py-[40px] !px-6 animated"
           style={{ animationDelay: "0.2s" }}
         >
-          <p className="text-4xl font-bold mb-6">パーソナルリスク診断</p>
+          <p className="text-4xl font-bold mb-6">パーソナルリスク<br className="md:hidden" />診断</p>
           <p className="text-lg">あなたの未来を守るための第一歩</p>
         </header>
         {/* Main Content */}
@@ -55,13 +55,13 @@ const PersonalRisk = () => {
           </div>
 
           <p className="text-gray-700 my-[60px]">
-            今すぐあなたのキャッシュフローのリスクをチェックし、将来の不安要素を解消しましょう。
+            今すぐあなたのキャッシュフローの<br />リスクをチェックし、<br />将来の不安要素を解消しましょう。
           </p>
 
           {/* CTA Button */}
           <button
             onClick={() => navigate("/personal-risk/quiz")}
-            className="!bg-[#00c300]  text-white font-semibold !py-4 !px-8 !rounded-full shadow-lg hover:!bg-[#009900] hover:!border-[#007700] transition-all focus:!outline-none animated"
+            className="!bg-[#00c300]  text-white font-semibold !py-4 !px-16 !rounded-full shadow-lg hover:!bg-[#009900] hover:!border-[#007700] transition-all focus:!outline-none animated"
             style={{ animationDelay: "0.6s" }}
           >
             診断を始める

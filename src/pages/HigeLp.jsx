@@ -33,6 +33,79 @@ const LineButton = ({ className = "", size = "normal" }) => (
     </button>
 );
 
+const LineButton2 = ({ className = "", size = "normal" }) => (
+    <button
+        className={`
+      flex items-center justify-center space-x-2 
+      ${size === "large" ? "px-8 py-4 !text-xl" : "px-6 py-3 text-base"}
+      !bg-green-500 hover:bg-green-600 
+      text-white font-bold !rounded-full 
+      shadow-lg hover:shadow-xl 
+      transform hover:scale-105 
+      border-2 border-transparent hover:!border-green-500
+      focus:!outline-none 
+      transition-all duration-300
+      ${className}
+    `}
+    >
+        <MessageCircle className={size === "large" ? "w-6 h-6" : "w-5 h-5"} />
+        <span className="px-1">LINE登録で<br className="md:hidden" />無料診断</span>
+        <ArrowRight className={size === "large" ? "w-6 h-6" : "w-5 h-5"} />
+    </button>
+);
+
+const WarnBox1 = ({ className = "" }) => (
+    <div
+        className="bg-white/80 backdrop-blur rounded-xl p-4 shadow-lg border border-red-100 transform hover:-translate-y-1 transition-transform"
+    >
+        <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <AlertTriangle className="w-8 h-8 text-red-500" />
+        </div>
+        <p className="text-gray-700 !text-lg md:text-xl text-center font-medium">
+            なんとなくNISAやってます。。
+        </p>
+        <div className="mt-4 pt-4 border-t border-red-100">
+            <p className="text-red-600 !text-base md:text-lg text-center font-bold">
+                放置すると危険です
+            </p>
+        </div>
+    </div>
+);
+const WarnBox2 = ({ className = "" }) => (
+    <div
+        className="bg-white/80 backdrop-blur rounded-xl p-4 shadow-lg border border-red-100 transform hover:-translate-y-1 transition-transform"
+    >
+        <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <AlertTriangle className="w-8 h-8 text-red-500" />
+        </div>
+        <p className="text-gray-700 !text-lg md:text-xl text-center font-medium">
+            銀行だけにたくさん貯金してます。。
+        </p>
+        <div className="mt-4 pt-4 border-t border-red-100">
+            <p className="text-red-600 !text-base md:text-lg text-center font-bold">
+                放置すると危険です
+            </p>
+        </div>
+    </div>
+);
+const WarnBox3 = ({ className = "" }) => (
+    <div
+        className="bg-white/80 backdrop-blur rounded-xl p-4 shadow-lg border border-red-100 transform hover:-translate-y-1 transition-transform"
+    >
+        <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <AlertTriangle className="w-8 h-8 text-red-500" />
+        </div>
+        <p className="text-gray-700 !text-lg md:text-xl text-center font-medium">
+            保険入ってるけどどんなんだか<br className="md:hidden" />わかりません。。
+        </p>
+        <div className="mt-4 pt-4 border-t border-red-100">
+            <p className="text-red-600 !text-base md:text-lg text-center font-bold">
+                放置すると危険です
+            </p>
+        </div>
+    </div>
+);
+
 const HigeLp = () => {
     const navigate = useNavigate();
     const [isVisible, setIsVisible] = useState(false);
@@ -88,17 +161,17 @@ const HigeLp = () => {
                             <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
                                 <TrendingUp className="w-6 h-6 text-white" />
                             </div>
-                            <h1 className="!text-xl font-bold text-gray-800">
-                                ヒゲさんの資産形成
+                            <h1 className="!text-base md:!text-xl font-bold text-gray-800">
+                                ヒゲさんの<br className="md:hidden" />資産形成
                             </h1>
                         </div>
-                        <LineButton />
+                        <LineButton2 className="!text-sm md:!text-base" />
                     </div>
                 </div>
             </header>
 
             <main>
-                <section className="relative pt-28 pb-16 px-4">
+                <section className="relative pt-28 pb-16 px-2">
                     <div className="container mx-auto max-w-4xl">
                         <div
                             className={`transition-all duration-1000 transform ${
@@ -158,7 +231,7 @@ const HigeLp = () => {
                                 ))}
                             </div>
 
-                            <div className="bg-gradient-to-br from-red-100 via-white to-red-50 rounded-3xl shadow-lg p-8 mb-16">
+                            <div className="bg-gradient-to-br from-red-100 via-white to-red-50 rounded-3xl shadow-lg p-2 mb-16">
                                 <div className="relative">
                                     <div className="text-center mb-12">
                                         <div className="inline-block bg-red-100/50 backdrop-blur p-4 rounded-full mb-4">
@@ -168,7 +241,7 @@ const HigeLp = () => {
                                             こんな人は要注意です
                                         </h3>
                                         <div className="bg-white/80 backdrop-blur rounded-2xl p-8 max-w-4xl mx-auto">
-                                            <p className="!text-3xl md:text-4xl text-red-600 font-bold">
+                                            <p className="!text-2xl md:text-4xl text-red-600 font-bold">
                                                 気づかないうちに
                                                 <br />
                                                 <span className="!text-4xl md:text-5xl inline-block my-4 bg-gradient-to-r from-red-600 to-orange-600 text-transparent bg-clip-text">
@@ -181,7 +254,7 @@ const HigeLp = () => {
                                     </div>
 
                                     <div className="grid md:grid-cols-1 gap-6">
-                                        {warningPoints.map((point, index) => (
+                                        {/* {warningPoints.map((point, index) => (
                                             <div
                                                 key={index}
                                                 className="bg-white/80 backdrop-blur rounded-xl p-6 shadow-lg border border-red-100 transform hover:-translate-y-1 transition-transform"
@@ -198,14 +271,17 @@ const HigeLp = () => {
                                                     </p>
                                                 </div>
                                             </div>
-                                        ))}
+                                        ))} */}
+                                        <WarnBox1 className="" />
+                                        <WarnBox2 className="" />
+                                        <WarnBox3 className="" />
                                     </div>
 
                                     <div className="mt-12 text-center">
                                         <div className="inline-block bg-white/90 backdrop-blur rounded-xl p-6 shadow-lg border border-red-100">
                                             <p className="!text-xl md:text-2xl text-red-600 font-bold flex items-center">
                                                 <AlertTriangle className="w-8 h-8 mr-3" />
-                                                お金を無駄にしているかもしれません！
+                                                お金を無駄にしている<br className="md:hidden" />かもしれません！
                                             </p>
                                         </div>
                                     </div>
@@ -220,7 +296,7 @@ const HigeLp = () => {
                             </div>
 
                             {/* Benefits Section */}
-                            <div className="bg-white rounded-3xl shadow-lg p-8 mb-16">
+                            <div className="bg-white rounded-3xl shadow-lg p-2 mb-16">
                                 <div className="text-center mb-12">
                                     <div className="inline-block bg-green-100 text-green-600 px-6 py-2 rounded-full text-sm font-semibold mb-4">
                                         <MessageCircle className="w-5 h-5 inline-block mr-2" />
@@ -233,7 +309,7 @@ const HigeLp = () => {
                                             3つの無料特典
                                         </span>
                                     </h3>
-                                    <p className="!text-xl text-gray-600">
+                                    <p className="!text-base text-gray-600">
                                         LINE登録後、すぐにご利用いただけます
                                     </p>
                                 </div>
@@ -247,7 +323,7 @@ const HigeLp = () => {
                                             パーソナルリスク診断
                                         </h4>
                                         <p className="text-gray-600 text-center mb-4">
-                                            現在のあなたの潜在的なリスクを診断できます
+                                            現在のあなたの潜在的なリスクを<br className="md:hidden" />診断できます
                                         </p>
                                         <div className="bg-white/80 rounded-lg p-3 text-center">
                                             <p className="text-green-600 font-bold">
@@ -264,7 +340,7 @@ const HigeLp = () => {
                                             パーソナルタイプ診断
                                         </h4>
                                         <p className="text-gray-600 text-center mb-4">
-                                            あなたに最も適した資産形成を知ることができます
+                                            あなたに最も適した資産形成を<br className="md:hidden" />知ることができます
                                         </p>
                                         <div className="bg-white/80 rounded-lg p-3 text-center">
                                             <p className="text-green-600 font-bold">
@@ -309,7 +385,7 @@ const HigeLp = () => {
                                 </div>
                             </div>
 
-                            <div className="bg-white rounded-3xl shadow-lg p-8 mb-16">
+                            <div className="bg-white rounded-3xl shadow-lg p-2 mb-16">
                                 <div className="text-center mb-8">
                                     <h3 className="text-2xl font-bold text-gray-800">
                                         よくある質問
@@ -319,7 +395,7 @@ const HigeLp = () => {
                                     {faqs.map((faq, index) => (
                                         <div
                                             key={index}
-                                            className="bg-gray-50 rounded-lg p-6"
+                                            className="bg-gray-50 rounded-lg p-4"
                                         >
                                             <div className="flex items-start mb-3">
                                                 <HelpCircle className="w-6 h-6 text-green-600 mr-3 flex-shrink-0" />

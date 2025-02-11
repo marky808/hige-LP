@@ -210,7 +210,7 @@ const Chapter3 = () => {
                         target="_blank"
                         className="flex items-center text-center gap-x-2 !bg-[#00c300] hover:!bg-[#007700] !text-white !py-4 !px-8 !rounded-full shadow-lg !text-xl focus:!outline-none"
                     >
-                        無料個別相談はこちらからお気軽に！
+                        無料個別相談は<br className="md:hidden" />こちらからお気軽に！
                     </a>
 
                     <button
@@ -239,7 +239,7 @@ const Chapter3 = () => {
                 </div>
                 <footer className="text-center py-6 md:py-8 text-gray-600 text-sm">
                     <p className="text-base">
-                        ※本E-bookの無断転載・共有は禁止させていただきます。
+                        ※ 本 E-book の無断転載・共有は<br className="md:hidden" />禁止させていただきます。
                     </p>
                     <p className="text-base mt-6">
                         Copyright © 2025 All Rights Reserved.

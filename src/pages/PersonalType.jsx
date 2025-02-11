@@ -19,9 +19,9 @@ const PersonalType = () => {
           className="bg-gradient-to-r from-[#00c300] to-[#009900] text-white text-center !py-[40px] !px-6 animated"
           style={{ animationDelay: "0.2s" }}
         >
-          <p className="text-4xl font-bold mb-6">パーソナルタイプ診断</p>
+          <p className="text-4xl font-bold mb-6">パーソナルタイプ<br className="md:hidden" />診断</p>
           <p className="text-lg">
-            あなたの個性を見抜き、未来への道しるべを発見しよう
+            あなたの個性を見抜き、<br className="md:hidden" />未来への道しるべを発見しよう
           </p>
         </header>
         {/* Main Content */}
@@ -57,16 +57,16 @@ const PersonalType = () => {
           </div>
 
           <p className="text-gray-700 my-6">
-            あなたのライフスタイルや価値観、行動パターンに基づいて16通りのタイプに分類します。
+            あなたのライフスタイルや価値観、<br />行動パターンに基づいて<br />16通りのタイプに分類します。
           </p>
           <p className="text-gray-700 my-6">
-            自分自身の強みや改善点を把握し、より良い未来への第一歩を踏み出しましょう。
+            自分自身の強みや改善点を把握し、<br />より良い未来への第一歩を<br />踏み出しましょう。
           </p>
 
           {/* CTA Button */}
           <button
             onClick={() => navigate("/personal-type/quiz")}
-            className="!bg-[#00c300] text-white font-semibold !py-4 !px-8 !rounded-full shadow-lg hover:!bg-[#009900] hover:!border-[#007700] transition-all focus:!outline-none animated"
+            className="!bg-[#00c300] text-white font-semibold !py-4 !px-16 !rounded-full shadow-lg hover:!bg-[#009900] hover:!border-[#007700] transition-all focus:!outline-none animated"
             style={{ animationDelay: "0.6s" }}
           >
             診断を始める
