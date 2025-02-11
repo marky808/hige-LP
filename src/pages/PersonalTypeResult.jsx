@@ -83,7 +83,7 @@ const PersonalTypePageResult = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex justify-center items-center hover:!border-none bg-[#EEF2F6] p-5">
+    <div className="min-h-screen flex justify-center items-center hover:!border-none bg-[#EEF2F6] p-2">
       <div className="">
         {loading ? (
           <button
@@ -114,7 +114,7 @@ const PersonalTypePageResult = () => {
             診断中...
           </button>
         ) : (
-          <div className="bg-white p-8 rounded-lg shadow-lg md:w-[600px] md:min-h-[300px] text-center -mt-36">
+          <div className="bg-white p-4 rounded-lg shadow-lg md:w-[600px] md:min-h-[300px] text-center">
             <h1 className="!text-3xl font-semibold text-[#00c300] mb-8">
               {result.title}
             </h1>
@@ -124,8 +124,8 @@ const PersonalTypePageResult = () => {
               【自分】{result.resSelf}
               【リスク】{result.resRisk}
             </div> */}
-            <p className="text-gray-600 mb-4">{result.description}</p>
-            <p className="text-gray-600 mb-4">{result.investment}</p>
+            <p className="text-gray-600 mb-4 p-2 bg-[#ebf8ff]">{result.description}</p>
+            <p className="text-gray-600 mb-4 p-2 bg-[#ebf8cc]">{result.investment}</p>
             <button
               onClick={() => navigate("/personal-type")}
               className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] hover:!border-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl focus:!outline-none"
@@ -135,7 +135,7 @@ const PersonalTypePageResult = () => {
               </div>
               LINEに戻る
             </button>
-            <p className="text-lg text-gray-600 mb-4 mt-4">あなたに正しい投資感覚を植え付けるE-BOOKを見てみましょう！</p>
+            <p className="text-base text-gray-600 mb-4 mt-4">あなたに正しい投資感覚を植え付ける<br className="md:hidden" /> E-BOOK を見てみましょう！</p>
               <button
                 onClick={() => navigate("/ebook")}
                 className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] hover:!border-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg !text-xl focus:!outline-none"

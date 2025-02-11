@@ -19,7 +19,7 @@ const PersonalRisk = () => {
           className="bg-gradient-to-r from-[#00c300] to-[#009900] text-white text-center !py-[40px] !px-6 animated"
           style={{ animationDelay: "0.2s" }}
         >
-          <p className="text-4xl font-bold mb-6">パーソナルリスク<br className="md:hidden" />診断</p>
+          <p className="text-3xl font-bold mb-6">パーソナルリスク<br className="md:hidden" />診断</p>
           <p className="text-lg">あなたの未来を守るための第一歩</p>
         </header>
         {/* Main Content */}

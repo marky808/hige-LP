@@ -23,7 +23,7 @@ const EBook = () => {
                     <div className="border-b-3 border-[#4299e1] w-full mx-auto mt-4"></div>
                 </div>
 
-                <div className="bg-[#f8f9fa] p-2 md:p-6 rounded-lg">
+                <div className="bg-[#f8f9fa] p-0 md:p-6 rounded-lg">
                     <h3 className="text-2xl font-bold text-[#2c5282] mb-8 text-left">
                         目次
                     </h3>

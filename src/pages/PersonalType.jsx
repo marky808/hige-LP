@@ -19,7 +19,7 @@ const PersonalType = () => {
           className="bg-gradient-to-r from-[#00c300] to-[#009900] text-white text-center !py-[40px] !px-6 animated"
           style={{ animationDelay: "0.2s" }}
         >
-          <p className="text-4xl font-bold mb-6">パーソナルタイプ<br className="md:hidden" />診断</p>
+          <p className="text-3xl font-bold mb-6">パーソナルタイプ<br className="md:hidden" />診断</p>
           <p className="text-lg">
             あなたの個性を見抜き、<br className="md:hidden" />未来への道しるべを発見しよう
           </p>
