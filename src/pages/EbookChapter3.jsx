@@ -206,7 +206,7 @@ const Chapter3 = () => {
                 </div>
                 <div className="flex flex-col gap-4 justify-center items-center mt-6">
                     <a
-                        href="https://www.jicoo.com/t/EGWbrqfX1y_B/e/Avza59cr"
+                        href="https://www.jicoo.com/t/EGWbrqfX1y_B/e/-ir5sKQf"
                         target="_blank"
                         className="flex items-center text-center gap-x-2 !bg-[#00c300] hover:!bg-[#007700] !text-white !py-4 !px-8 !rounded-full shadow-lg !text-xl focus:!outline-none"
                     >
