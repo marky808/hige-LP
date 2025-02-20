@@ -214,7 +214,7 @@ const Chapter3 = () => {
                     </a>
 
                     <button
-                        onClick={() => navigate("#")}
+                        onClick={() => (window.location.href = "https://line.me/R/ti/p/@427cbszb")}
                         className="flex items-center gap-x-2 !bg-[#00c300] hover:!bg-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl focus:!outline-none"
                     >
                         <div className="mr-2 text-2xl font-bold">

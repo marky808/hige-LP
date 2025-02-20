@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 const LineButton = ({ className = "", size = "normal" }) => (
     <button
+        onClick={() => (window.location.href = "https://line.me/R/ti/p/@427cbszb")}
         className={`
       flex items-center justify-center space-x-2 
       ${size === "large" ? "px-8 py-4 !text-xl" : "px-6 py-3 text-base"}
@@ -35,6 +36,7 @@ const LineButton = ({ className = "", size = "normal" }) => (
 
 const LineButton2 = ({ className = "", size = "normal" }) => (
     <button
+        onClick={() => (window.location.href = "https://line.me/R/ti/p/@427cbszb")}
         className={`
       flex items-center justify-center space-x-2 
       ${size === "large" ? "px-8 py-4 !text-xl" : "px-6 py-3 text-base"}

@@ -76,7 +76,7 @@ const PersonalRiskResult = () => {
             </div>
             <p className="text-base text-gray-600 mb-4 p-2 bg-[#ebf8cc]">{result.description}</p>
             <button
-              onClick={() => navigate("/personal-risk")}
+              onClick={() => (window.location.href = "https://line.me/R/ti/p/@427cbszb")}
               className="inline-flex items-center !bg-[#00c300] hover:!bg-[#007700] hover:!border-[#007700] text-white !py-4 !px-8 !rounded-full shadow-lg transition-transform transform hover:-translate-y-1 underline !text-xl focus:!outline-none"
             >
               <div className="mr-2 text-2xl font-bold">
