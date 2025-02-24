@@ -15,20 +15,20 @@ const PersonalRiskResult = () => {
       let title = "";
       let description = "";
 
-      if (score >= 30) {
+      if (score >= 85) {
         title = "非常に安心できる状態です";
         description =
           "計画もしっかりできており、将来のリスクにも十分備えられています。";
-      } else if (score >= 20) {
-        title = "比較的安心できる状態です";
-        description = "現状はまずまずですが、定期的な見直しをおすすめします。";
-      } else if (score >= 10) {
-        title = "注意が必要な状態です";
+      } else if (score >= 70) {
+        title = "まずまずです";
+        description = "E-BOOK を読んでより理解を深めましょう。";
+      } else if (score >= 50) {
+        title = "ちょっと危ないかも？";
         description =
-          "キャッシュフローの見直しが必要です。早急な対策を検討しましょう。";
+          "今すぐ E-BOOK をチェックしてみましょう。";
       } else {
-        title = "非常にリスクが高い状態です";
-        description = "今すぐ専門家に相談し、抜本的な対策を検討してください。";
+        title = "リスクの高い状態です";
+        description = "今すぐ E-BOOK をチェックして！";
       }
       setResult({ title, description });
       setLoading(false);
