@@ -29,7 +29,7 @@ const LineButton = ({ className = "", size = "normal" }) => (
     `}
     >
         <MessageCircle className={size === "large" ? "w-6 h-6" : "w-5 h-5"} />
-        <span>LINE登録で無料診断</span>
+        <span>診断をスタート</span>
         <ArrowRight className={size === "large" ? "w-6 h-6" : "w-5 h-5"} />
     </button>
 );
