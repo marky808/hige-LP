@@ -4,5 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  base: "/hige-lp/",
+  build: {
+    outDir: "docs",
+  },
+  plugins: [
+    react(),
+    tailwindcss()
+  ],
 });
